@@ -4,9 +4,9 @@ function MyApp({ Component, pageProps }) {
   return (
   <div>
     <Component {...pageProps} />
-    <footer>
+    {/* <footer>
       <p>&copy; 2022 Omkar Adhali</p>
-    </footer>
+    </footer> */}
   </div>)
 }
 
