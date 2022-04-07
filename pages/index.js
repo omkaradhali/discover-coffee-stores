@@ -5,7 +5,16 @@ import Card from '../components/card'
 import styles from '../styles/Home.module.css'
 import coffeeStores from '../data/coffee-stores.json'
 
-export default function Home() {
+export async function getStaticProps(context) {
+
+  return {
+    props: {
+      coffeeStores,
+    },
+  };
+}
+
+export default function Home({ coffeeStores }) {
 
   const handleOnBannerBtnClick = (event) => {
     console.log("button clicked")
@@ -32,6 +41,7 @@ export default function Home() {
                 imgUrl={coffeeStore.imgUrl}
                 href={`/coffee-store/${coffeeStore.id}`}
                 className={styles.card}
+                key = {coffeeStore.id}
               />
             )
           })}
