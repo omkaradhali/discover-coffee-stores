@@ -20,3 +20,13 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
     - (https://nextjs.org/docs/api-reference/next/head)
  - next/Image
     - (https://nextjs.org/docs/api-reference/next/image)
+ - next/link
+    - (https://nextjs.org/docs/api-reference/next/link)
+ - Dynamic Routes
+    - (https://nextjs.org/docs/routing/dynamic-routes)
+ - useRouter
+    - (https://nextjs.org/docs/api-reference/next/router)
+ - CSS Modules
+    - (https://nextjs.org/docs/basic-features/built-in-css-support)
+ - Static Site Generation - getStaticProps
+    - (https://nextjs.org/docs/basic-features/data-fetching/get-static-props)
