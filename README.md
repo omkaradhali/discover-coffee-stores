@@ -30,3 +30,5 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
     - (https://nextjs.org/docs/basic-features/built-in-css-support)
  - Static Site Generation - getStaticProps
     - (https://nextjs.org/docs/basic-features/data-fetching/get-static-props)
+ - getStaticPaths
+    - (https://nextjs.org/docs/api-reference/data-fetching/get-static-paths)
