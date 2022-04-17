@@ -3,13 +3,13 @@ import Image from 'next/image'
 import Banner from '../components/banner'
 import Card from '../components/card'
 import styles from '../styles/Home.module.css'
-import coffeeStoresData from '../data/coffee-stores.json'
+import { fetchCoffeeStore } from '../lib/coffee-store'
 
 export async function getStaticProps(context) {
-
+  let coffeeStores = await fetchCoffeeStore();
   return {
     props: {
-      coffeeStores: coffeeStoresData,
+      coffeeStores,
     },
   };
 }
@@ -41,10 +41,10 @@ export default function Home({ coffeeStores }) {
                 return (
                   <Card 
                     name={coffeeStore.name} 
-                    imgUrl={coffeeStore.imgUrl}
-                    href={`/coffee-store/${coffeeStore.id}`}
+                    imgUrl={coffeeStore.imgUrl || "https://images.unsplash.com/photo-1504753793650-d4a2b783c15e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80"}
+                    href={`/coffee-store/${coffeeStore.fsq_id}`}
                     className={styles.card}
-                    key = {coffeeStore.id}
+                    key = {coffeeStore.fsq_id}
                   />
                 )
               })} 
@@ -55,3 +55,4 @@ export default function Home({ coffeeStores }) {
     </div>
   )
 }
+// fsq3gyOoy741U6ubfCCkR84/gU/jAdf54j44lCiK8iC/Wss=
